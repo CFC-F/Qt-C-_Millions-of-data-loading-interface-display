@@ -1,0 +1,14 @@
+
+	模仿Everything，进行百万级数据界面加载
+	如果，采用分页数据展示，即可用tableWidget控件等，数据展示不会有卡顿、内存占用过高等问题
+
+	但是想展示效果和Everything界面相似，需要采用tableview控件
+	tableview控件，标准的QStandardItemModel模型，使用insertRow()函数、setItem()函数、
+	以及appendRow()与其相同的有insertRow()，insertColumn()等函数插入数据，
+	这种方法无法满足大量数据快速加载展示，会存在数据展示卡顿以及内存过高情况
+	
+	目前，网上暂时可以查询到的几种方法：
+	1.自定义model模型
+	https://zhuanlan.zhihu.com/p/48001975
+	2.多线程（可能容易出现崩坏的现象，加载快慢未验证）
+	3.懒加载
